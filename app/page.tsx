@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import { Hero, HeroSubtitle, HeroTitle } from "@/components/Hero";
 
 export default function Home() {
   return (
@@ -7,7 +8,18 @@ export default function Home() {
         <Container>Header</Container>
       </header>
       <main>
-        <Container>Homepage</Container>
+        <Container>
+          <Hero>
+            <HeroTitle>
+              Linear is a better way <br /> to build products
+            </HeroTitle>
+            <HeroSubtitle>
+              Meet the new standard for modern software development. <br />
+              Streamline issues, sprints and product roadmaps.
+            </HeroSubtitle>
+            <img src="/hero.webp" alt="Hero image" />
+          </Hero>
+        </Container>
       </main>
       <footer>
         <Container>Footer</Container>
