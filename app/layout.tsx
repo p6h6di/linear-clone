@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Linear Clone",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <body className="">
+        <Header />
+        <main className="pt-[var(--navigation-height)]">{children}</main>
+      </body>
     </html>
   );
 }
