@@ -1,17 +1,30 @@
-import React from "react";
+import { cn } from "@/lib/utils";
 
-interface HeroElementProps {
+interface HeroProps {
   children: React.ReactNode;
 }
 
-export const HeroTitle = ({ children }: HeroElementProps) => {
-  return <h1 className="text-5xl my-6">{children}</h1>;
+interface HeroElementProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const HeroTitle = ({ children, className }: HeroElementProps) => {
+  return (
+    <h1 className={cn("text-gradient my-6 text-6xl md:text-8xl", className)}>
+      {children}
+    </h1>
+  );
 };
 
-export const HeroSubtitle = ({ children }: HeroElementProps) => {
-  return <p className="text-lg mb-12">{children}</p>;
+export const HeroSubtitle = ({ children, className }: HeroElementProps) => {
+  return (
+    <p className={cn("mb-12 text-lg text-primary-text md:text-xl", className)}>
+      {children}
+    </p>
+  );
 };
 
-export const Hero = ({ children }: { children: React.ReactNode }) => {
+export const Hero = ({ children }: HeroProps) => {
   return <div className="text-center">{children}</div>;
 };
