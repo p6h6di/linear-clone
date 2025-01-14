@@ -4,9 +4,6 @@ import { Hero, HeroSubtitle, HeroTitle } from "@/components/Hero";
 export default function Home() {
   return (
     <div>
-      {/* <header>
-        <Container>Header</Container>
-      </header> */}
       <main>
         <Container>
           <Hero>
@@ -21,9 +18,6 @@ export default function Home() {
           </Hero>
         </Container>
       </main>
-      <footer>
-        <Container>Footer</Container>
-      </footer>
     </div>
   );
 }
