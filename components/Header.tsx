@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import { Logo } from "./icons/logo";
@@ -11,8 +11,25 @@ import { cn } from "@/lib/utils";
 const Header = () => {
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] =
     useState<boolean>(false);
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("overflow-hidden", hamburgerMenuIsOpen);
+  }, [hamburgerMenuIsOpen]);
+
+  useEffect(() => {
+    const closeHamburgerNavigation = () => setHamburgerMenuIsOpen(false);
+
+    window.addEventListener("orientationchange", closeHamburgerNavigation);
+    window.addEventListener("resize", closeHamburgerNavigation);
+
+    return () => {
+      window.removeEventListener("orientationchange", closeHamburgerNavigation);
+      window.removeEventListener("resize", closeHamburgerNavigation);
+    };
+  }, [setHamburgerMenuIsOpen]);
   return (
-    <header className="fixed top-0 left-0 z-10 w-full border-b border-white-a08 backdrop-blur-[12px]">
+    <header className="fixed top-0 left-0 z-10 w-full border-b border-transparent-white backdrop-blur-[12px]">
       <Container className="flex h-navigation-height">
         <Link className="flex items-center text-md" href="/">
           <Logo className="mr-4 h-[1.8rem] w-[1.8rem]" /> Linear
