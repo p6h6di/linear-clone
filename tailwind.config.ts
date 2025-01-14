@@ -18,10 +18,12 @@ export default {
       "5xl": ["8rem", "1"],
     },
     colors: {
+      transparent: "transparent",
       white: "#fff",
       "white-a08": "rgba(255, 255, 255, 0.08)",
       background: "#000212",
       grey: "#858699",
+      "grey-dark": "#222326",
     },
     spacing: {
       0: "0",
@@ -37,6 +39,7 @@ export default {
       10: "4rem",
       11: "4.4rem",
       12: "4.8rem",
+      "navigation-height": "var(--navigation-height)",
     },
     backgroundImage: {
       "primary-gradient":
