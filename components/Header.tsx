@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import { Logo } from "./icons/logo";
-import Button from "./ui/button";
 import { HamburgerIcon } from "./icons/hamburger";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] =
