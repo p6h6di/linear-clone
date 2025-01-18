@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import { ZapIllustration } from "../illustrations/zap";
-import { Button, Highlight } from "../ui/button";
+import { Button } from "../ui/button";
 import { LogoLightIllustration } from "../illustrations/logo-light";
 import { KeyboardIllustration } from "../illustrations/keyboard";
 
@@ -12,7 +12,7 @@ const UnlikeAnyTool = () => {
         <div className="text-center">
           <h2 className="mb-4 text-4xl md:mb-7 md:text-7xl">
             Unlike any tool
-            <br className="hidden md:inline-block" /> you've used before
+            <br className="hidden md:inline-block" /> you&apos;ve used before
           </h2>
           <p className="mx-auto mb-12 max-w-[68rem] text-lg text-primary-text md:mb-7 md:text-xl">
             Designed to the last pixel and engineered with unforgiving
